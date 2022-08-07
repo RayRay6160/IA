@@ -1,18 +1,18 @@
 {
   "dependencies": {
     "com.microsoft.azure.spatial-anchors-sdk.android": {
-      "version": "file:C:/Users/User/Downloads/com.microsoft.azure.spatial-anchors-sdk.android-2.13.0.tgz",
+      "version": "file:C:/Users/rayray/Desktop/git-repos/IA/com.microsoft.azure.spatial-anchors-sdk.android-2.13.0/package",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "local",
       "dependencies": {
         "com.unity.xr.arcore": "4.0.12",
         "com.microsoft.azure.spatial-anchors-sdk.core": "2.13.0"
       }
     },
     "com.microsoft.azure.spatial-anchors-sdk.core": {
-      "version": "file:C:/Users/User/Downloads/com.microsoft.azure.spatial-anchors-sdk.core-2.13.0.tgz",
+      "version": "file:C:/Users/rayray/Desktop/git-repos/IA/com.microsoft.azure.spatial-anchors-sdk.core-2.13.0/package",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "local",
       "dependencies": {
         "com.unity.subsystemregistration": "1.0.6",
         "com.unity.xr.arsubsystems": "4.0.8",

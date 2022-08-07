@@ -20,6 +20,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AzureSpatialAnchors.Examples/Scenes/AzureSpatialAnchorsCoarseRelocDemo.unity
     guid: 215a1784376860644a66e82f3d383b85
+  - enabled: 1
+    path: Assets/Select_HorG.unity
+    guid: c3b0b259af600b641be9fe260b0ddbe8
+  - enabled: 1
+    path: Assets/Host.unity
+    guid: 438f8474e0179cb42a1ac708ce5b382a
+  - enabled: 1
+    path: Assets/Guest.unity
+    guid: dbbab0e5e556f194b950c5e5ace17b81
+  - enabled: 1
+    path: Assets/InGame.unity
+    guid: c644e12203d75dc448247f00aed01899
+  - enabled: 1
+    path: Assets/Score.unity
+    guid: 21f0207f6196f0d409c643d0779d515c
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 87f66def52a300f47a1b37fc6c22a91f,
       type: 2}
