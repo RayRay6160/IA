@@ -1,3 +1,4 @@
+//Server Main 
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 },()=>{
     console.log('server started');
@@ -10,29 +11,68 @@ wss.on('connection', function connection(ws) {
    })
 })
 
-/*wss.on('connection', ws =>{
-    ws.on("message", message => {
-        const data = JSON.parse(message);
-        console.log(data.x, data.y);
-    } )
-});*/
-
 wss.on('listening',()=>{
    console.log('listening on 8080');
 })
 
-//Create Room
-function Create() {
-    const roomPIN = new roomPIN;
-    const rand = Math.random().toString().substr(2, 8);
-    roomPIN = rand;
-    console.log("Your PIN is: "+ roomPIN);
-    Socket.send(roomPIN);
-}  
+//Connection
+wss.on("request", request => {
 
-//Join Room
-function Join() {
-    const InputPIN = prompt("Please input the PIN:");
+const connection = request.accept(null, request.origin);
+    connection.on("open", () => console.log("opened!"))
+    connection.on("close", () => console.log("closed!"))
+    connection.on("message", message => 
+    {
+    const result = JSON.parse(message.utf8Data)
+    
+//Create Room
+    if (result.method == "create") {
+        const clientId = result.clientId;
+        const roomPIN = roomPIN();
+        const gameId = guid();
+            games[gameId] = {
+                "id": gameId,
+                "clients": []
+            }
+
+            const payLoad = {
+                "method": "create",
+                "game" : games[gameId]
+            }
+            const con = clients[clientId].connection;
+            con.send(JSON.stringify(payLoad));
+    }
+    
+    //Join Room
+    if (result.method === "join") {
+
+        const clientId = result.clientId;
+        const gameId = result.gameId;
+        const game = games[gameId];
+        if (game.clients.length > 4) 
+        {
+            //max players reach
+            return;
+        }
+    
+
+    //Game Start
+    if (game.clients.length === 3) updateGameState();
+
+            const payLoad = {
+                "method": "join",
+                "game": game
+            }
+        game.clients.forEach(c => {
+                clients[c.clientId].connection.send(JSON.stringify(payLoad))
+        })
+    }
+    })
+})
+
+//generate gamePIN
+function roomPIN() {
+    return Math.random().toString(4).substring(1); 
 }
 
 //Sync
@@ -43,6 +83,4 @@ function Sync() {
 //Leaderboard
 function Leaderboard(unity) {
     const leaderboard = new leaderboard;
-
 }
-
