@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 440481643}
   - component: {fileID: 440481642}
   - component: {fileID: 440481641}
+  - component: {fileID: 440481644}
   m_Layer: 5
   m_Name: Play_bt
   m_TagString: Untagged
@@ -560,6 +561,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440481639}
   m_CullTransparentMesh: 1
+--- !u!95 &440481644
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440481639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6f2dc09aa77e3249954d738287ca338, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &925842866
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,8 +692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77ffb650ed47c745b6eb115dde4c275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackMask: {fileID: 0}
-  tutorialImage: {fileID: 0}
+  blackMask: {fileID: 1466573641}
+  tutorialImage: {fileID: 1836256825}
   fadeTime: 3.5
 --- !u!4 &988184491
 Transform:
@@ -885,9 +905,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198930205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6347f1a90aae28a4cb40e9e64f93ce19, type: 3}
+  m_Script: {fileID: 11500000, guid: 55058d12ffc399447ba64abf054c55a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clampMusic: {fileID: 8300000, guid: b77acbb374058480dbeae07444542e03, type: 3}
+  fastMusic: {fileID: 8300000, guid: ae40a015c678644b0ac6139e22717c04, type: 3}
+  fadeSpeed: 5
+  sFXPlayer: {fileID: 0}
 --- !u!4 &1198930207
 Transform:
   m_ObjectHideFlags: 0
@@ -1341,7 +1365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9d6a0c686a3fed48943b988d81315ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3aab26fdd689ee4bbf78109e3fc2490, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
