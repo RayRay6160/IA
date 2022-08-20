@@ -19,8 +19,8 @@ wss.on('listening',()=>{
 wss.on("request", request => {
 
 const connection = request.accept(null, request.origin);
-    connection.on("open", () => console.log("opened!"))
-    connection.on("close", () => console.log("closed!"))
+    connection.on("open", () => console.log("Server opened!"))
+    connection.on("close", () => console.log("Server closed!"))
     connection.on("message", message => 
     {
     const result = JSON.parse(message.utf8Data)
@@ -84,3 +84,9 @@ function Sync() {
 function Leaderboard(unity) {
     const leaderboard = new leaderboard;
 }
+
+function S4() {
+    return (((1+Math.random())*0x10000)|0).toString(16).substring(1); 
+}
+
+const guid = () => (S4() + S4() + "-" + S4() + "-4" + S4() + "-" + S4()).toLowerCase();
