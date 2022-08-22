@@ -1,47 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SceneSwitch : MonoBehaviour
 {
-
-    const string GuestRoomPage = "Guest";
-    const string HostRoomPage = "Host";
-    const string MainMenu = "MainMenu";
-    const string ScorePage = "Score";
-    const string Gameplay = "Gameplay";
-    const string RoomEnter = "RoomEnter";
-
-
     public void LoadGuestScene()
     {
-        SceneManager.LoadScene(GuestRoomPage);
+        SceneLoader.Instance.LoadGuestScene();
     }
 
     public void LoadHostScene()
     {
-        SceneManager.LoadScene(HostRoomPage);
+        SceneLoader.Instance.LoadHostScene();
     }
 
     public void LoadMainMenuScene()
     {
-        SceneManager.LoadScene(MainMenu);
+        SceneLoader.Instance.LoadMainMenuScene();
     }
 
     public void LoadScoreScene()
     {
-        SceneManager.LoadScene(ScorePage);
+        SceneLoader.Instance.LoadScoreScene();
     }
 
     public void LoadRoomEnterScene()
     {
-        SceneManager.LoadScene(RoomEnter);
+        SceneLoader.Instance.LoadRoomEnterScene();
     }
 
     public void LoadInGameScene()
     {
-        SceneManager.LoadScene(Gameplay);
+        SceneLoader.Instance.LoadInGameScene();
     }
 }

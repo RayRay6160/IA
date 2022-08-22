@@ -331,7 +331,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fecb85adc256b5e459d0db8d4a225288, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 440481642}
   - component: {fileID: 440481641}
   - component: {fileID: 440481644}
+  - component: {fileID: 440481645}
   m_Layer: 5
   m_Name: Play_bt
   m_TagString: Untagged
@@ -511,8 +512,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 988184490}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 440481645}
+        m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
         m_MethodName: LoadInGameScene
         m_Mode: 1
         m_Arguments:
@@ -580,6 +581,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &440481645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440481639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6321f9cf903d17a49ba08564ab243627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925842866
 GameObject:
   m_ObjectHideFlags: 0
