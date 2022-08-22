@@ -1,7 +1,7 @@
 //Server Main 
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 },()=>{
-    console.log('server started');
+    console.log('Server started');
 })
 
 wss.on('connection', function connection(ws) {
@@ -49,15 +49,16 @@ const connection = request.accept(null, request.origin);
         const clientId = result.clientId;
         const gameId = result.gameId;
         const game = games[gameId];
-        if (game.clients.length > 4) 
+        if (game.clients.length >=4) 
         {
             //max players reach
+            console.log("Max players reach")
             return;
         }
     
 
     //Game Start
-    if (game.clients.length === 3) updateGameState();
+    if (game.clients.length === 4) updateGameState();
 
             const payLoad = {
                 "method": "join",
@@ -70,10 +71,12 @@ const connection = request.accept(null, request.origin);
     })
 })
 
-//generate gamePIN
+//generate 6-digit gamePIN  
+//For example: "055152"
 function roomPIN() {
-    return Math.random().toString(4).substring(1); 
+    return (((1+Math.random())*0x10000)|0).toString(6).substring(1); 
 }
+wss.emit("Room PIN: " + roomPIN());
 
 //Sync
 function Sync() {
