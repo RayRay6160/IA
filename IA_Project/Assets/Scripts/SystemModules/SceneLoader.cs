@@ -18,9 +18,10 @@ public class SceneLoader : PersistentSingleton<SceneLoader> {
 
     const string GuestRoomPage = "Guest";
     const string HostRoomPage = "Host";
-    const string Select_HorG = "Select_HorG";
+    const string MainMenu = "MainMenu";
     const string ScorePage = "Score";
     const string Gameplay = "Gameplay";
+    const string RoomEnter = "RoomEnter";
 
     #endregion
 
@@ -104,12 +105,17 @@ public class SceneLoader : PersistentSingleton<SceneLoader> {
         Load(HostRoomPage);
     }
 
-    public void LoadSelect_HorGScene() {
-        Load(Select_HorG);
+    public void LoadMainMenuScene() {
+        Load(MainMenu);
     }
 
     public void LoadScoreScene() {
         Load(ScorePage);
+    }
+
+    public void LoadRoomEnterScene()
+    {
+        Load(RoomEnter);
     }
 
     public void LoadInGameScene() {

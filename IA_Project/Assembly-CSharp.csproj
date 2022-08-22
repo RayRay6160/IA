@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\UnityEditor\MinMaxRangeAttribute.cs" />
+    <Compile Include="Assets\Scripts\UI\MobileKeyBoard.cs" />
     <Compile Include="Assets\Scripts\SystemModules\Timer.cs" />
     <Compile Include="Assets\Scripts\SystemModules\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\SystemModules\StageBuilder.cs" />
@@ -65,8 +66,10 @@
     <Compile Include="Assets\Scripts\Character\Ghost\GhostManager.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController\Player.cs" />
     <Compile Include="Assets\Scripts\SystemModules\Singleton.cs" />
+    <Compile Include="Assets\Scripts\UI\HoverButtonGuestButton.cs" />
     <Compile Include="Assets\Scripts\SystemModules\PersistentSingleton.cs" />
     <Compile Include="Assets\Scripts\SystemModules\Pool.cs" />
+    <Compile Include="Assets\Scripts\UI\HoverButton.cs" />
     <Compile Include="Assets\Scripts\Audio\SFX\SFXEditor.cs" />
     <Compile Include="Assets\Scripts\Character\Ghost\Ghost.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Assets\Scripts\Audio\SFX\SimpleSFX.cs" />
     <Compile Include="Assets\UnityEditor\RangedFloatDrawer.cs" />
     <Compile Include="Assets\Websocket\WS_Client.cs" />
+    <Compile Include="Assets\Scripts\SystemModules\SceneSwitch.cs" />
     <None Include="Assets\Websocket\Packages\WebSocketSharp-netstandard.1.0.1\lib\netstandard2.0\websocket-sharp.xml" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -298,10 +302,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Assets/Websocket/Packages/WebSocketSharp-netstandard.1.0.1/lib/netstandard2.0/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Assets/Websocket/Packages/WebSocketSharp-netstandard.1.0.1/lib/netstandard2.0/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -649,28 +653,28 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/a1/Desktop/IA/IA/IA_Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/a1/Desktop/New folder (2)/IA/IA_Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
