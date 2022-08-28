@@ -7,6 +7,10 @@ const wss = new WebSocket.Server({ port: 8080 },()=>{
 wss.on('connection', function connection(ws) {
    ws.on('message', (data) => {
     console.log('data recieved: ', data.toString())
+    
+    roomPINcode = new Array(5);
+    Array(0) = data.toString();
+    console.log('The roomPIN is :' ,Array(0));
     ws.send(data.toString());
    })
 })
@@ -14,6 +18,10 @@ wss.on('connection', function connection(ws) {
 wss.on('listening',()=>{
    console.log('listening on 8080');
 })
+ 
+
+
+
 
 //Connection
 wss.on("request", request => {
@@ -71,22 +79,28 @@ const connection = request.accept(null, request.origin);
     })
 })
 
-//generate 6-digit gamePIN  
-//For example: "055152"
-function roomPIN() {
-    return (((1+Math.random())*0x10000)|0).toString(6).substring(1); 
-}
-wss.emit("Room PIN: " + roomPIN());
 
-//Sync
-function Sync() {
-    ws.Sync(PlayerData);
-}
 
-//Leaderboard
-function Leaderboard(unity) {
-    const leaderboard = new leaderboard;
-}
+//PlayerScore array
+const playerArray = [
+    {name: "Player1", score: "430", id:"player1"},
+    {name: "Player2", score: "580", id:"player2"},
+    {name: "Player3", score: "310", id:"player3"},
+    {name: "Player4", score: "640", id:"player4"},
+    {name: "Player5", score: "495", id:"player5"}
+  ] 
+function compare(a,b) { return b.score - a.score }
+playerArray.sort(compare);
+const updatePlayerScore = playerArray.map((name, score) => {
+    return name + score
+})
+console.log(" ", updatePlayerScore)
+console.log(" ", playerArray)
+
+//Test for leaderboard
+/*var playerScore = [2300, 2600, 1230, 680, 230, 1230]
+playerScore.sort(function(a, b){return a - b});
+console.log("Leaderboard test: ", playerScore)*/
 
 function S4() {
     return (((1+Math.random())*0x10000)|0).toString(16).substring(1); 
