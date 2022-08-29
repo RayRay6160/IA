@@ -22,6 +22,7 @@ public class SceneLoader : PersistentSingleton<SceneLoader> {
     const string ScorePage = "Score";
     const string Gameplay = "Gameplay";
     const string RoomEnter = "RoomEnter";
+    const string RoomEnterHost = "RoomEnter(Host)";
 
     #endregion
 
@@ -116,6 +117,11 @@ public class SceneLoader : PersistentSingleton<SceneLoader> {
     public void LoadRoomEnterScene()
     {
         Load(RoomEnter);
+    }
+
+    public void LoadRoomEnterHostScene()
+    {
+        Load(RoomEnterHost);
     }
 
     public void LoadInGameScene() {

@@ -30,6 +30,11 @@ public class SceneSwitch : MonoBehaviour
         SceneLoader.Instance.LoadRoomEnterScene();
     }
 
+    public void LoadRoomEnterHostScene()
+    {
+        SceneLoader.Instance.LoadRoomEnterHostScene();
+    }
+
     public void LoadInGameScene()
     {
         SceneLoader.Instance.LoadInGameScene();

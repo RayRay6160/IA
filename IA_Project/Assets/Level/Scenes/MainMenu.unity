@@ -610,7 +610,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1857785467}
         m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
-        m_MethodName: LoadHostScene
+        m_MethodName: LoadRoomEnterHostScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
