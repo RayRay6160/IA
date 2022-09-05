@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Level/Scenes/MainMenu.unity
+    guid: bf73d18e4f6ec7844b2130f351841634
+  - enabled: 1
+    path: Assets/Level/Scenes/PlayAsHost.unity
+    guid: 0e09ea7d70f971b41b1c2d40bdfc6abd
+  - enabled: 1
+    path: Assets/Level/Scenes/PlayAsClient.unity
+    guid: 77f15ea4350395249b6349cf21d1402d
+  - enabled: 1
+    path: Assets/Level/Scenes/HostRoom.unity
+    guid: ee1983ccd5f33d944adf7c85d0407e47
+  - enabled: 1
+    path: Assets/Level/Scenes/GuestRoom.unity
+    guid: fc912bbf57b4b7a4ab9608be928ce705
+  - enabled: 1
+    path: Assets/Level/Scenes/Gameplay.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Level/Scenes/Score.unity
+    guid: 0ddccd02bd2ac3442ad9f1594e7eb7f4
+  m_configObjects: {}
